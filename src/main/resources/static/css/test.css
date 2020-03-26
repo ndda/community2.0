@@ -1,0 +1,29 @@
+.loginMargin{
+    margin:100px;
+    margin-right: 150px;
+    }
+.loginError{
+    margin-right: auto;
+    margin-left: 240px;
+    }
+.publishBody{
+    background-color: #e9ebef;
+    }
+.publishMargin{
+    margin:30px;
+    background-color: #fafafa;
+    }
+.publishButton{
+    float: right;
+}
+.avatar{
+height:30px;
+width:30px;}
+.labelInfo{
+    font-size: 11px!important;
+    color: #586069!important;
+}
+.labelFont-size{
+    font-size: 14px!important;
+
+}

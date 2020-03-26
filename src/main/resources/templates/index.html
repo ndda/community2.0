@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>宁大大啊</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/test.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+</head>
+<body class="publishBody">
+<div th:insert="navigation :: nav"></div>
+<div class="row publishMargin">
+    <div class="col-lg-9 col-md-12 col-xs-12">
+        <h3><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 问题</h3>
+        <hr style="height:2px;border:none;border-top:2px solid ;" />
+        <div class="media" th:each="questionDisplayDTO:${questionDisplayDTOList}">
+            <div class="media-left media-top">
+                <a href="#">
+                    <img class="media-object img-rounded avatar" th:src="${questionDisplayDTO.user.avatarUrl}" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading" th:text="${questionDisplayDTO.title}">Middle aligned media</h4>
+                <span th:text="${questionDisplayDTO.description}"></span>
+                <div class="labelInfo">
+                    <span class="glyphicon glyphicon-comment"><span class="labelFont-size" th:text="${questionDisplayDTO.comment}"></span></span>&nbsp
+                    <span class="glyphicon glyphicon-star"><span class="labelFont-size" th:text="${questionDisplayDTO.star}"></span></span>&nbsp
+                    <span class="glyphicon glyphicon-eye-open"><span class="labelFont-size" th:text="${questionDisplayDTO.browse}"></span></span>&nbsp&nbsp&nbsp
+                    <span class="labelFont-size" th:text="${questionDisplayDTO.gmtModify}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-12 col-xs-12">
+        <h3>问题发起指南</h3>
+        • 问题标题: 请用精简的语言描述您发布的问题，不超过25字 <br>
+        • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料<br>
+        • 选择标签: 选择一个或者多个合适的标签，用逗号隔开，每个标签不超过10个字<br>
+    </div>
+</div>
+</body>
+</html>

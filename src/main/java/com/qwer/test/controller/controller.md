@@ -1,0 +1,19 @@
+##此包为控制器类
+###类名原则
+类名与url路径名相同 ,例如:  
+类名：url路径名  
+[IndexController](http://localhost:8887)：http://localhost:8887;  
+[LoginController](http://localhost:8887/login)：http://localhost:8887/login;
+***
+###方法速览
+####[IndexController](IndexController.java)
+#####returnIndexPage():返回index页面，同时获取cookie，根据token判断用户是否登录并返回不同的操作按钮；
+####[PublishController](PublishController.java)
+#####returnPublishPage():返回publish页面，同时获取cookie，根据token判断用户是否登录并返回不同的操作按钮；
+#####questionPersistence():持久化question数据到question数据表
+####[RegisterController](RegisterController.java)
+#####returnRegisterPage():返回register页面；
+#####userPersistence():由register页面点击注册后跳转所需方法,获取表单内容,并存储到user数据表中；
+####[LoginController](LoginController.java)
+#####returnLoginPage():返回login页面；
+#####loginCache():验证账号和密码是否都存在，是则取出token传递给浏览器cookie;
